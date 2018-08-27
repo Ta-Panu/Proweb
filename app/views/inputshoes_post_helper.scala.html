@@ -1,0 +1,46 @@
+@(inputShoes: InputShoes)
+<br><br><br><br>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2><b>SHOW Input Shoes </b></h2></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class = "col-sm-6">
+                    <table class="table">
+                    <tr>
+                        <td>รหัสรองเท้า : </td><td> @inputShoes.getId </td></tr>
+                    <tr>
+                        <td>ชื่อรองเท้า : </td><td> @inputShoes.getName </td></tr>
+                    <tr>
+                        <td>ราคา : </td><td> @inputShoes.getAmount </td></tr>
+                    <tr>
+                        <td>จำนวนคู่ : </td><td> @inputShoes.getUnit </td></tr>
+                    <tr>
+                        <td>แบนด์รองเท้า : </td><td> @inputShoes.getBrand </td></tr>
+                    <tr>
+                        <td>ขนาด : </td><td> @inputShoes.getSize </td></tr>
+
+
+                <div class = "col-sm-6">
+                    <tr>
+                        <td>สี : </td><td> @inputShoes.getColor </td></tr>
+                    <tr>
+                        <td>ส่วนลด : </td><td> @inputShoes.getDiscount </td></tr>
+                    <tr>
+                        <td>รายละเอียด : </td><td> @inputShoes.getDetails </td></tr>
+                    <tr>
+                        <td>ภาพ : </td><td> @inputShoes.getPicture </td></tr>
+                </div>
+                    </table>
+
+                    </div>
+
+        </div>
+                <center><input type="submit" value="Submit" class="btn btn-success">
+                    <input type="reset" value="Reset" class="btn btn-danger"></center>
+                <br><br>
+
+            </div>
+        </div>
+</div>
+

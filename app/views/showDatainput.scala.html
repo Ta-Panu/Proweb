@@ -1,0 +1,29 @@
+@(inputShoesPicture: InputShoesPicture)
+
+<br><br><br><br>
+<div class="container">
+    <div class="panel panel-default">
+
+        <div class="panel-heading"><h2><b>Register</b></h2></div>
+        <div class="panel-body">
+            <table class="table">
+
+                <tr><td>รหัสรองเท้า : </td><td> @inputShoesPicture.getId </td></tr>
+                <tr><td>ชื่อรองเท้า : </td><td> @inputShoesPicture.getName </td></tr>
+                <tr><td>ราคา : </td><td> @inputShoesPicture.getAmount </td></tr>
+                <tr><td>จำนวนคู่ : </td><td> @inputShoesPicture.getUnit </td></tr>
+                <tr><td>แบนด์รองเท้า : </td><td> @inputShoesPicture.getBrand </td></tr>
+                <tr><td>ขนาด : </td><td> @inputShoesPicture.getSize </td></tr>
+                <tr><td>สี : </td><td> @inputShoesPicture.getColor </td></tr>
+                <tr><td>ส่วนลด : </td><td> @inputShoesPicture.getDiscount </td></tr>
+                <tr><td>รายละเอียด : </td><td> @inputShoesPicture.getDetails </td></tr>
+                <tr><td>ภาพ : </td><td> @inputShoesPicture.getPicture </td></tr>
+                <tr><td><img src = "/assets/images/Shoes/@inputShoesPicture.getPicture()"class="img-thumbnail"width="100px"height="100px"></td></tr>
+                <tr><td></td><td></td></tr>
+
+            </table>
+            <center> <a href="/inputshoes_picture_post_list" class="btn btn-primary" role="button">Back</a>
+                <a href="/#" class="btn btn-success" role="button">Submit</a></center>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /Adidas                     controllers.Application.showAdidas()
+GET     /Nike                       controllers.Application.showNike()
+GET     /Vans                       controllers.Application.showVans()
+GET     /register                   controllers.Application.register()
+POST    /showregister               controllers.Application.showregister()
+GET     /sale                       controllers.Application.sale()
+
+GET     /inputshoes_form_helper     controllers.Application.inputshoes_form_helper()
+POST    /inputshoes_post_helper     controllers.Application.inputshoes_post_helper()
+
+GET     /inputshoes_form_list     controllers.Application.inputshoes_form_list()
+POST    /inputshoes_post_list     controllers.Application.inputshoes_post_list()
+
+GET     /inputshoes_picture_form_list   controllers.Application.inputshoes_picture_form_list()
+POST    /inputshoes_picture_post_list   controllers.Application.inputshoes_picture_post_list()
+
+GET     /showDatainput/:id              controllers.Application.showDatainput(id : String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

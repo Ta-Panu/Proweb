@@ -1,0 +1,59 @@
+@(inputShoesPictureList:List[InputShoesPicture])
+
+<br><br><br><br>
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><h2><b>SHOW Input Shoes </b></h2></div>
+        <div class="panel-body">
+            <div class="row">
+                <div class = "col-sm-12">
+                    <table class="table">
+                        <tr>
+                        <th>รหัสรองเท้า : </th>
+                        <th>ชื่อรองเท้า : </th>
+                        <th>ราคา : </th>
+                        <th>จำนวนคู่ : </th>
+                        <th>แบนด์รองเท้า : </th>
+                        <th>ขนาด : </th>
+                        <th>สี : </th>
+                        <th>ส่วนลด : </th>
+                        <th>รายละเอียด : </th>
+                        <th>ภาพ : </th>
+                    </tr>
+                    @for(inShoes <- inputShoesPictureList){
+                        <tr>
+
+                            <td>
+                                <a href="/showDatainput/@inShoes.getId()">
+                                @inShoes.getId()
+                                </a>
+                            </td>
+
+                            <td>@inShoes.getName() </td>
+                            <td>@inShoes.getAmount() </td>
+                            <td>@inShoes.getUnit() </td>
+                            <td>@inShoes.getBrand() </td>
+                            <td>@inShoes.getSize() </td>
+                            <td>@inShoes.getColor() </td>
+                            <td>@inShoes.getDiscount() </td>
+                            <td>@inShoes.getDetails() </td>
+                            <td>
+                                <img src = "/assets/images/Shoes/@inShoes.getPicture()"class="img-thumbnail"width="100px"height="100px">
+                            </td>
+                        </tr>
+
+                    }
+
+                    </table>
+                    </div>
+        </div>
+            <center> <a href="/inputshoes_picture_form_list" class="btn btn-primary" role="button">ADD</a>
+                <a href="/#" class="btn btn-success" role="button">Submit</a>
+
+            </center>
+                <br><br>
+
+            </div>
+        </div>
+</div>
+

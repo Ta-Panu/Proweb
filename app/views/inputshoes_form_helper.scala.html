@@ -1,0 +1,44 @@
+@(myForm:Form[InputShoes])
+
+@import helper._;
+
+    <html>
+        <head>
+            <title>Input Shoes</title>
+            <link rel="stylesheet" href="/assets/stylesheet/bootstrap/css/bootstrap.css">
+        </head>
+        <body>
+
+            <br><br><br><br>
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><h2><b>Input Shoes</b></h2></div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class = "col-sm-6">
+            @helper.form(action = routes.Application.inputshoes_post_helper(), 'class->"from-control"){
+                @inputText(myForm("id"), '_label ->  "รหัสรองเท้า", 'size -> "50",'maxlength->"40",'requried->"requied")
+                @inputText(myForm("name"),'_label -> "ชื่อรองเท้า", 'size -> "50",'maxlength->"40",'requried->"requied")
+                @inputText(myForm("amount"), '_label -> "ราคา", 'size -> "50",'maxlength->"40",'requried->"requied")
+                @inputText(myForm("unit"), '_label -> "จำนวนคู่", 'size -> "50",'maxlength->"40",'requried->"requied")
+                @inputText(myForm("brand"), '_label -> "แบนด์รองเท้า", 'size -> "50",'maxlength->"40",'requried->"requied")
+                @select(myForm("size") , options=Seq ("5"->"5","6"->"6","7"->"7","8"->"8","9"->"9"),'_label->"ขนาด")
+            </div>
+                <div class = "col-sm-6">
+                @inputRadioGroup(myForm("color"), options = Seq ("Black"->"Black","White"->"White"),'_label -> "สี")<input type="color" name = '@myForm("color")'>
+                @inputText(myForm("discount"), '_label -> "ส่วนลด", 'size -> "50",'maxlength->"40",'requried->"requied")
+                @textarea(myForm("details"), '_label -> "รายละเอียด",'cols ->"55",'rows->"5")
+                @inputText(myForm("picture"), '_label -> "ภาพ", 'size -> "50",'maxlength->"40",'requried->"requied")
+                </div>
+                            <center><input type="submit" value="Submit" class="btn btn-success">
+                                <input type="reset" value="Reset" class="btn btn-danger"></center>
+                            <br><br>
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+            }
+        </body>
+    </html>
